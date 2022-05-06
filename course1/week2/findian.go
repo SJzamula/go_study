@@ -13,10 +13,14 @@
 	 "strings"
  )
  func main() {
-	fmt.Printf("Please, enter your input")
+	fmt.Printf("Please, enter your input\n")
 	var str string
-	fmt.Scan("%s", str)
-	for i:=0; i < str.; i++ {
-		fmt.Println(8)
+	fmt.Scan(&str)
+	if (strings.ContainsAny(str, "a") || strings.ContainsAny(str, "A")) && 
+	(strings.HasPrefix(str, "i") || strings.HasPrefix(str, "I")) &&
+	(strings.HasSuffix(str, "n") || strings.HasSuffix(str, "N")) {
+		fmt.Printf("Found!\n")
+	} else {
+		fmt.Printf("Not Found\n")
 	}
  }
